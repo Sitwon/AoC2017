@@ -1,0 +1,53 @@
+a 1
+b 105700
+c 122700
+d 2
+e 2
+f 0
+g -94300
+h 1
+
+
+8: f=1
+9: d=2
+
+10: e=2
+11: g=d 2
+12: g=g*e 2*2 4
+13: g=g-b
+14: if g==0 then 15: f=0
+16: e=e+1
+17: g=e
+18: g=g-b
+19: if g!=0 then goto 11
+
+20: d=d+1
+21: g=d
+22: g=g-b
+23: if g!=0 then goto 10
+
+24: if f==0 then 25: h+=1
+26: g=b
+27: g=g-c
+28: if g!=0 then goto 30
+29: quit
+30: b=b+17
+31: goto 8
+
+b = 105700
+c = 122700
+#for k in range(1000):
+for b in range(105700, 122700, 17):
+	#f=1
+	#for d in range(2, 105700):
+	#	for e in range(2, 105700):
+	#		g = (d * e) - b
+	#		if g == 0:
+	#			f = 0
+	if not is_prime(b):
+		h += 1
+	#b += 17
+
+f=0
+
+
